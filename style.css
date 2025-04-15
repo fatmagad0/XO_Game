@@ -1,5 +1,5 @@
-.game{
-    width: 255px;
+.game {
+    width: 312px;
     text-align: center;
     font-family: system-ui;
     margin: auto;
@@ -7,27 +7,31 @@
     font-weight: 600;
 }
 
-.title{
+.title {
     background-color: rgb(202, 148, 253);
-    padding: 5px 0;
+    padding: 10px 0;
     margin: 5px 0;
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
 }
 
-span{
-color: #8b0ba8;
+span {
+    color: #8b0ba8;
 }
 
-.square{
-    background:rgb(202, 148, 253);
-    width: 80px;
-    height: 80px;
+.square {
+    background: rgb(202, 148, 253);
+    width: 100px;
+    height: 100px;
     margin: 2px;
     float: left;
-    font-size: 50px;
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.square:hover{
+
+.square:hover {
     background: #8b0ba8;
     cursor: pointer;
 }
