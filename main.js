@@ -1,6 +1,7 @@
 let title = document.querySelector('.title');
 let turn = 'X';
 let square = [];
+
 function gameEnd(num1,num2,num3)
 {
     title.innerHTML = `${square[num1]} winner`; // Show who is the winner
@@ -52,6 +53,19 @@ function winner()
     if(square[3] == square[5] && square[5] == square[7] && square[5] != ''){
         gameEnd(3,5,7);
     }
+
+    let isDraw = true;
+    for (let i = 1; i < 10; i++) {
+        if (square[i] === '') {
+            isDraw = false;
+            break;
+        }
+    }
+
+if (isDraw) {
+    title.innerHTML = "Draw";
+    setTimeout(() => location.reload(), 4000);
+}
 
 
 }
