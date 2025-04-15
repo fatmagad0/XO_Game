@@ -4,17 +4,18 @@ let square = [];
 
 function gameEnd(num1,num2,num3)
 {
-    title.innerHTML = `${square[num1]} winner`; // Show who is the winner
+    title.innerHTML = `${square[num1]} winner`; // Show winner in the title
+    // Highlight winning squares
     document.getElementById('item' + num1).style.background = '#000';
     document.getElementById('item' + num2).style.background = '#000';
     document.getElementById('item' + num3).style.background = '#000';
 
     setInterval(function(){title.innerHTML += '.'},1000);
-    setTimeout(function(){location.reload();},4000);
+    setTimeout(function(){location.reload();},4000); // Reload after 4 sec
 }
 
 
-
+// Chack if winner or draw
 function winner()
 {
     for(let i = 1; i<10; i++)
@@ -69,6 +70,7 @@ if (isDraw) {
 
 
 }
+// Handel the moves
 function game(id){
     let element = document.getElementById(id);
     if(turn === 'X' && element.innerHTML == ''){
@@ -81,5 +83,5 @@ function game(id){
         turn = 'X';
         title.innerHTML = 'X';
     }
-    winner();
+    winner(); // Check for win or draw
 }
